@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 1 - Profile</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-wrapper">
+            <img src="image.jpg" alt="Cyril Idu" data-testid="slackDisplayImage">
+        </div>
+        <h2 data-testid="slackUserName">Cyril Idu</h2>
+        <div class="details">
+            <div class="track" data-testid="myTrack">Track: Frontend Track</div>
+            <div id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek"></div>
+            <div id="currentTime" data-testid="currentUTCTime"></div>
+            <a href="https://github.com/Dev-cyril/Hng_statge1" target="_blank">
+                <div class="github" data-testid="githubURL">GitHub</div>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    const currentDayElement = document.getElementById('currentDayOfTheWeek');
+    const currentTimeElement = document.getElementById('currentTime');
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    const currentDate = new Date();
+    currentDayElement.textContent = days[currentDate.getDay()];
+    currentTimeElement.textContent = `Current UTC Time: ${currentDate.getTime()}ms`;
+</script>
+
+</html>
