@@ -19,7 +19,7 @@
             <div id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek"></div>
             <div id="currentTime" data-testid="currentUTCTime"></div>
             <a href="https://github.com/Dev-cyril/Hng_statge1" target="_blank">
-                <div class="github" data-testid="githubURL">GitHub</div>
+                <div class="github" data-testid="githubURL">GitHub Repository</div>
             </a>
         </div>
     </div>
@@ -30,7 +30,7 @@
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     const currentDate = new Date();
-    currentDayElement.textContent = days[currentDate.getDay()];
+    currentDayElement.textContent = `current day: ${days[currentDate.getDay()]}`;
     currentTimeElement.textContent = `Current UTC Time: ${currentDate.getTime()}ms`;
 </script>
 
